@@ -361,6 +361,14 @@ def collect(fetcher, cfg):
     return items, names, failures
 
 
+def dedupe_key(item_id):
+    """BBC ends its story IDs with a revision number (#0, #1, ...) that goes up when a
+    story is edited. Ignore it, so an edited story counts as already seen."""
+    if item_id.startswith("BBC Business:"):
+        return re.sub(r"#\d+$", "", item_id)
+    return item_id
+
+
 def run(dry_run):
     cfg = load_json(WATCHLIST, None)
     fetcher = Fetcher()
@@ -375,11 +383,13 @@ def run(dry_run):
     detected = now_utc()
 
     hits = []
+    seen_base = {dedupe_key(k) for k in seen["items"]}
     for it in items:
         c = matcher.classify(it)
-        if c and it["id"] not in seen["items"]:
+        if c and dedupe_key(it["id"]) not in seen_base:
             hits.append((it, c[0], c[1]))
             seen["items"][it["id"]] = iso_et(detected)
+            seen_base.add(dedupe_key(it["id"]))
 
     topic = os.environ.get("NTFY_TOPIC", "").strip()
     if dry_run:

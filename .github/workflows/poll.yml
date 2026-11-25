@@ -1,4 +1,5 @@
 name: poll
+# Reads public news feeds and sends tier 1 alerts via ntfy. See README.md.
 
 on:
   schedule:

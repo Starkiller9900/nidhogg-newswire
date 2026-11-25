@@ -1,0 +1,103 @@
+[
+ {
+  "id": "sec:0001104659-26-131741",
+  "source": "SEC 8-K",
+  "kind": "8-K",
+  "title": "8-K - DEERE & CO (0000315189) (Filer)",
+  "text": "DEERE & CO",
+  "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926131741/0001104659-26-131741-index.htm",
+  "ts": "2026-11-25T06:00:47-05:00",
+  "items": [
+   "2.02",
+   "7.01",
+   "9.01"
+  ]
+ },
+ {
+  "id": "sec:0001299709-26-000092",
+  "source": "SEC 8-K",
+  "kind": "8-K",
+  "title": "8-K - Axos Financial, Inc. (0001299709) (Filer)",
+  "text": "Axos Financial, Inc.",
+  "url": "https://www.sec.gov/Archives/edgar/data/1299709/000129970926000092/0001299709-26-000092-index.htm",
+  "ts": "2026-11-25T09:00:23-05:00",
+  "items": [
+   "5.02"
+  ]
+ },
+ {
+  "id": "sec:0001206774-26-000614",
+  "source": "SEC 8-K",
+  "kind": "8-K",
+  "title": "8-K - MAYS J W INC (0000054187) (Filer)",
+  "text": "MAYS J W INC",
+  "url": "https://www.sec.gov/Archives/edgar/data/54187/000120677426000614/0001206774-26-000614-index.htm",
+  "ts": "2026-11-25T09:00:36-05:00",
+  "items": [
+   "5.07"
+  ]
+ },
+ {
+  "id": "BBC Business:https://www.bbc.co.uk/news/articles/c893r9ke5p97o#1",
+  "source": "BBC Business",
+  "kind": "news",
+  "title": "US announces new tariffs on host of countries including China",
+  "text": "",
+  "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
+  "ts": "2026-11-25T08:49:47-05:00"
+ },
+ {
+  "id": "NYT Business:https://www.nytimes.com/2026/11/24/business/l3harris-ground-stop-aviation.html",
+  "source": "NYT Business",
+  "kind": "news",
+  "title": "Top Aviation Officials Were Traveling When F.A.A.’s Nationwide Ground Stop Halted Flights",
+  "text": "",
+  "url": "https://www.nytimes.com/2026/11/24/business/l3harris-ground-stop-aviation.html",
+  "ts": "2026-11-24T09:10:04-05:00"
+ },
+ {
+  "id": "NYT Business:https://www.nytimes.com/2026/11/23/business/trump-administration-megaspeed-trade-blacklist-nvidia.html",
+  "source": "NYT Business",
+  "kind": "news",
+  "title": "Trump Administration Imposes Sanctions on Megaspeed, Singaporean Firm at Center of Nvidia Scandal",
+  "text": "",
+  "url": "https://www.nytimes.com/2026/11/23/business/trump-administration-megaspeed-trade-blacklist-nvidia.html",
+  "ts": "2026-11-24T09:17:40-05:00"
+ },
+ {
+  "id": "NYT Business:https://www.nytimes.com/2026/11/25/business/media/bob-iger-disney-robbie-whelan.html",
+  "source": "NYT Business",
+  "kind": "news",
+  "title": "As Bob Iger Exits Disney for Good, an Unwelcome Biography Arrives",
+  "text": "",
+  "url": "https://www.nytimes.com/2026/11/25/business/media/bob-iger-disney-robbie-whelan.html",
+  "ts": "2026-11-25T05:02:47-05:00"
+ },
+ {
+  "id": "fr:2026-24114",
+  "source": "Federal Register",
+  "kind": "presidential",
+  "title": "Protecting the Executive's Privileges and Enhancing Efficiencies in Federal Contracting",
+  "text": "",
+  "url": "https://www.federalregister.gov/documents/2026/11/25/2026-24114/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting",
+  "ts": "2026-11-25T00:00:00-05:00"
+ },
+ {
+  "id": "faa:General Arrival/Departure Delay Info:FLL:TM Initiatives:MIT:WX",
+  "source": "FAA",
+  "kind": "faa",
+  "title": "General Arrival/Departure Delay Info: FLL (TM Initiatives:MIT:WX)",
+  "text": "",
+  "url": "https://nasstatus.faa.gov/",
+  "ts": "2026-11-25T09:04:55-05:00"
+ },
+ {
+  "id": "BBC Business:https://www.bbc.co.uk/news/videos/ck7v2r6j1yl3o#5",
+  "source": "BBC Business",
+  "kind": "news",
+  "title": "Four generations of a family working in one factory",
+  "text": "",
+  "url": "https://www.bbc.co.uk/news/videos/ck7v2r6j1yl3o?at_medium=RSS&at_campaign=rss",
+  "ts": "2026-11-24T11:42:46-05:00"
+ }
+]

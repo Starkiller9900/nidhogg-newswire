@@ -1,0 +1,52 @@
+name: poll
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 minutes; GitHub often starts these late, sometimes 10-30 min
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "normal, test (one test push to your phone), or dry-run (print only)"
+        type: choice
+        options: [normal, test, dry-run]
+        default: normal
+
+permissions:
+  contents: write   # only used to commit seen.json and alerts.jsonl back to this repo
+
+concurrency:
+  group: nidhogg-newswire-poll
+  cancel-in-progress: false   # never run two polls at once
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Poll news sources
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          MODE: ${{ inputs.mode || 'normal' }}
+        run: |
+          case "$MODE" in
+            test)    python3 -I poll.py --test ;;
+            dry-run) python3 -I poll.py --dry-run ;;
+            *)       python3 -I poll.py ;;
+          esac
+
+      - name: Save seen.json and alerts.jsonl if they changed
+        if: ${{ (inputs.mode || 'normal') == 'normal' }}
+        run: |
+          for f in seen.json alerts.jsonl; do if [ -f "$f" ]; then git add "$f"; fi; done
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "newswire: update seen.json / alerts.jsonl"
+          git pull --rebase --quiet
+          git push

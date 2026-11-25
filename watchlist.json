@@ -1,0 +1,41 @@
+{
+  "tier1": {
+    "companies": {
+      "Dell": ["Dell"],
+      "Deere": ["Deere"],
+      "Nvidia": ["Nvidia"],
+      "Micron": ["Micron"],
+      "ASE Technology": ["ASE Technology"],
+      "EMCOR": ["EMCOR"],
+      "Analog Devices": ["Analog Devices"],
+      "Hewlett Packard Enterprise": ["Hewlett Packard Enterprise", "HPE"],
+      "HP Inc": ["HP Inc"],
+      "Marvell": ["Marvell"],
+      "Lumentum": ["Lumentum"],
+      "SanDisk": ["SanDisk"],
+      "NetApp": ["NetApp"]
+    },
+    "keywords": [
+      "tariff",
+      "export control",
+      "sanction",
+      "gallium",
+      "germanium",
+      "ground stop",
+      "strike",
+      "outage"
+    ]
+  },
+  "tier2": {
+    "kalshi_series_prefix": "KXEARNINGSMENTION",
+    "extra_companies": [],
+    "sec_8k_items": ["2.02", "1.01", "5.02", "8.01"]
+  },
+  "federal_register_keywords": [
+    "tariff",
+    "export control",
+    "sanction",
+    "gallium",
+    "germanium"
+  ]
+}
